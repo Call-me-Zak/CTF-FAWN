@@ -8,7 +8,9 @@ The flag was captured using nmap for recon, and ftp exploit for fetching the fla
 ### Phase 01 Reconnaissance
 nmap for host recon & scanning.
 
-Determine which port is open. As we can see port 21 is open & anonymous login is available.
+Determine which port is open using : ```nmap -sC -v``` 
+
+As we can see port 21 is open & anonymous login is available.
 
 ![image](https://github.com/user-attachments/assets/4982e43b-f364-49e9-b3cc-0f17ae964433)
 
@@ -17,10 +19,9 @@ A simple Google search about ftp protocol tells us all we need to know about the
 
 Another Google search about common ftp credentials gives us the 2nd nodge we need to make our breakthrough.
 
-
-
 ### Phase 03 Establishing a connection with the Fawn VM over FTP
 Using ```ftp <target IP>``` + Inserting the common credentials we found.
+
 And voila, login successful and we can retrieve the flag using ```ftp get flag.txt```, the downloaded file can be found into the directory from which we started the ftp service.
 
 ![image](https://github.com/user-attachments/assets/a8f4d6bc-882a-41a5-8420-4f787429f028)
